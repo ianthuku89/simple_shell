@@ -16,9 +16,13 @@ extern char **environ;
 
 char *scan_line(void);
 char **tokenize(char *line);
-int _execute(char **command, char **argv);
+int _execute(char **command, char **argv, int index);
 void freearray(char **arr);
-
+char *_getenv(char *vari);
+char *_getpath(char *command);
+char *_itoa(int n);
+void reverse_string(char *str, int len);
+void print_error(char *name, char *cmd, int index);
 char *_strdup(const char *str);
 int _strcmp(char *s1, char *s2);
 int _strlen(char *s);
