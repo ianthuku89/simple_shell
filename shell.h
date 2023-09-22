@@ -9,10 +9,10 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 #include <errno.h>
-#include <fcnt1.h>
+#include <fcntl.h>
 
 #define DELIMITER " \t\n"
-extern char **envi
+extern char **environ;
 
 char *scan_line(void);
 char **tokenize(char *line);

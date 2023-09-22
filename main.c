@@ -24,12 +24,11 @@ int main(int argc, char **argv)
 		command = tokenize(s);
 		if (!command)
 		{
-			free(line);
+			free(s);
 			continue;
 		}
 		status = _execute(command, argv);
 		free(s);
-		free_command(command);
 	}
 	return (status);
 }
