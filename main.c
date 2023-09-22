@@ -24,11 +24,9 @@ int main(int argc, char **argv)
 		command = tokenize(s);
 		if (!command)
 		{
-			free(s);
 			continue;
 		}
 		status = _execute(command, argv);
-		free(s);
 	}
 	return (status);
 }
