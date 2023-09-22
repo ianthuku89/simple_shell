@@ -10,6 +10,7 @@ int main(int argc, char **argv)
 	char *s = NULL;
 	char **command = NULL;
 	int status = 0;
+	int index = 0;
 
 	(void) argc;
 	while (1)
@@ -21,12 +22,14 @@ int main(int argc, char **argv)
 			write(STDOUT_FILENO, "n", 1);
 			return (status);
 		}
+
+		index++;
 		command = tokenize(s);
 		if (!command)
 		{
 			continue;
 		}
-		status = _execute(command, argv);
+		status = _execute(command, argv, index);
 	}
 	return (status);
 }
